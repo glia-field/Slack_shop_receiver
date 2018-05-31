@@ -71,3 +71,11 @@ function doPost(e) {
 
   return ContentService.createTextOutput(JSON.stringify(replyMessage)).setMimeType(ContentService.MimeType.JSON);
 }
+
+
+//デバッグ関数を作りたい
+function doPostTest(){
+  var e = {
+    parameter :"test"
+  }
+}
