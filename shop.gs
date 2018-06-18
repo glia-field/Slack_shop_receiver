@@ -6,7 +6,7 @@
 //sheet_id          : Google SpreadSheet ID for 残高リスト
 
 function doPost(e) {
-  //exploit JSON from payload
+　//exploit JSON from payload
   var parameter = e.parameter;
   var data = parameter.payload;
   var json = JSON.parse(decodeURIComponent(data));
@@ -17,11 +17,6 @@ function doPost(e) {
   var product_price = parseInt(product[0]);
   var product_add_user = product[1];
   
-  //移行中専用の臨時コード
-  if(product_add_user == ""){
-    product_add_user == "master";
-  }
-
   var image_url = json.original_message.attachments[0].image_url;
   
   var slack_access_token = PropertiesService.getScriptProperties().getProperty('SLACK_ACCESS_TOKEN');
